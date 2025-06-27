@@ -24,7 +24,7 @@ function RamenCard({ shop }: { shop: Shop }) {
 		<div className="w-full h-full" key={shop.id}>
 			<Link to={href}>
 				<img
-					className="w-full aspect-square object-cover"
+					className="w-full aspect-square object-cover rounded-md"
 					src={shop.photos?.[0]?.url ?? "https://placehold.co/400x400"}
 					alt={shop.name ?? "ラーメン"}
 				/>

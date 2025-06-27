@@ -1,18 +1,22 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
 	return (
-		<footer className="p-10 border-t border-gray-200">
-			<div className="flex items-center justify-center gap-10 mb-4">
-				<a href="/terms" className="text-sm text-gray-600 hover:text-gray-800">
-					規約
-				</a>
-				<a href="/privacy" className="text-sm text-gray-600 hover:text-gray-800">
-					プライバシーポリシー
-				</a>
-				<a href="/about" className="text-sm text-gray-600 hover:text-gray-800">
-					会社概要
-				</a>
+		<footer className="p-10 border-t border-gray-200 w-full">
+			<div className="w-1/4 mx-auto">
+				<ul className="flex items-center justify-center gap-10 mb-8 text-center">
+					<li className="w-full text-sm text-gray-600 hover:text-gray-800">
+						<Link to="/terms">規約</Link>
+					</li>
+					<li className="w-full text-sm text-gray-600 hover:text-gray-800">
+						<Link to="/privacy">プライバシーポリシー</Link>
+					</li>
+					<li className="w-full text-sm text-gray-600 hover:text-gray-800">
+						<Link to="/about">会社概要</Link>
+					</li>
+				</ul>
 			</div>
-			<p className="text-sm text-gray-600 text-center">&copy; 2025 RAMEEEN</p>
+			<p className="text-xs text-gray-600 text-center">&copy; 2025 RAMEEEN</p>
 		</footer>
 	);
 }
