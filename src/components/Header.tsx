@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
     const [search, setSearch] = useState("");
+    const navigate = useNavigate();
+
     return (
         <header className="border-b border-gray-200">
             <div className="flex items-center">
@@ -19,13 +22,24 @@ export default function Header() {
                             placeholder="Input keyword..."
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    navigate(`/search?q=${search}`);
+                                }
+                            }}
                         />
                     </div>
                     <div className="">
                         <ul className="flex items-center gap-4">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Contact</li>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about">About</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
