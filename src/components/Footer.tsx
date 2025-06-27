@@ -1,7 +1,4 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-export default function footer() {
+export default function Footer() {
     return (
         <footer className="p-10 bg-gray-100">
             <div className="flex items-center justify-center gap-10 mb-4">
