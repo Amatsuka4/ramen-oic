@@ -12,7 +12,7 @@ export default function Header() {
                     href="/"
                     className="text-3xl text-white font-bold bg-black px-4 py-2 hover:bg-gray-800"
                 >
-                    <h1>RAMEEEN</h1>
+                    <h1 className="italic">RAMEEEN</h1>
                 </a>
                 <div className="flex justify-between items-center gap-4 w-full mx-6">
                     <div className="">
