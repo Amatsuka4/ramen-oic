@@ -1,23 +1,11 @@
 import { Link } from "react-router-dom";
-
-type Photo = {
-	name: string;
-	url: string;
-	width: number;
-	height: number;
-};
-
-type Shop = {
-	id: string;
-	name?: string;
-	photos?: Photo[];
-};
+import type { Shop } from "../types";
 
 function ShopCard({ shop }: { shop: Shop }) {
 	const href = `/shop/${shop.id}`;
 
 	return (
-		<div className="w-full h-full" key={shop.id}>
+		<div className="w-full h-full mb-4" key={shop.id}>
 			<Link to={href}>
 				<img
 					className="w-full aspect-square object-cover rounded-md"
@@ -26,7 +14,7 @@ function ShopCard({ shop }: { shop: Shop }) {
 				/>
 			</Link>
 
-			<p className="text-center">
+			<p className="text-center mt-2">
 				<Link to={href}>{shop.name}</Link>
 			</p>
 		</div>

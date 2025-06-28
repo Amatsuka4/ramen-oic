@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import type { Shop } from "../types";
 
 //ToDO: 検索結果のページを作成
 //ToDO: 店舗別ページを作成
