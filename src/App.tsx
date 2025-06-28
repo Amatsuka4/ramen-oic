@@ -29,7 +29,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home ramens={ramens} />} />
 				<Route path="/search" element={<Search ramens={ramens} />} />
-				<Route path="/shop/:id" element={<Shop />} />
+				<Route path="/shop/:id" element={<Shop ramens={ramens} />} />
 			</Routes>
 			<Footer />
 		</>

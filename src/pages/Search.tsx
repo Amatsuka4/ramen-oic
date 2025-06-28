@@ -17,5 +17,5 @@ export default function Search({ ramens }: { ramens: Shop[] }) {
 		setResults(handleSearch(ramens, q));
 	}, [ramens, q]);
 
-	return <PageLayout title={`検索結果: ${q}`} shops={results} />;
+	return <PageLayout title={`${q} の検索結果: ${results.length}件`} shops={results} />;
 }
