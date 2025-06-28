@@ -8,6 +8,10 @@ import Search from "./pages/Search";
 import { getRamen } from "./api/getRamen";
 import type { Shop as ShopType } from "./types";
 
+//ToDo: 閲覧履歴の保存
+//ToDo: お気に入り機能
+//ToDo: 検索結果を、useMemoでメモ化
+
 function App() {
 	const [ramens, setRamens] = useState<ShopType[]>([]);
 
