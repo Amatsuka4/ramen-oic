@@ -30,6 +30,7 @@ export default function Header() {
                                 ) {
                                     e.preventDefault();
                                     navigate(`/search?q=${search}`);
+                                    setSearch("");
                                 }
                             }}
                         />
