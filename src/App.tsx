@@ -10,8 +10,6 @@ import type { Shop as ShopType } from "./types";
 import { useCookies } from "react-cookie";
 import History from "./components/History";
 
-//ToDo: 閲覧履歴の保存
-//ToDo: お気に入り機能
 //ToDo: 検索結果を、useMemoでメモ化
 
 function App() {
