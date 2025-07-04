@@ -35,10 +35,15 @@ function App() {
             setCookie("ramen_history", [[shop.photos?.[0]?.url, shop.id]]);
             return;
         }
-        if (ramen_history.includes([shop.photos?.[0]?.url, shop.id])) {
+        if (
+            (ramen_history as [string, string][]).some(
+                (item) => item[1] === shop.id
+            )
+        ) {
             return;
         }
         if (ramen_history.length >= 8) {
+            console.log("shift");
             ramen_history.shift();
         }
         setCookie(
